@@ -1,0 +1,5 @@
+streamlit>=1.36
+python-dotenv>=1.0.1
+pydantic>=2.7
+requests>=2.32
+altair>=5.3

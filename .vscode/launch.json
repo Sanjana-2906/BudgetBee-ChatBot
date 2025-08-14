@@ -1,0 +1,26 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run Streamlit: BudgetBee",
+      "type": "debugpy",
+      "request": "launch",
+
+      // Run the "streamlit" module via Python, equivalent to: python -m streamlit run app.py
+      "module": "streamlit.web.cli",
+      "args": ["run", "app.py", "--server.port", "8501"],
+
+      // Show logs in VS Code's terminal
+      "console": "integratedTerminal",
+
+      // Make sure we start in the project root (so .env and files resolve correctly)
+      "cwd": "${workspaceFolder}",
+
+      // If you have a .env with IBM keys, this injects them too (nice to have)
+      "envFile": "${workspaceFolder}/.env",
+
+      // Use only your code for debugging (ignores library internals)
+      "justMyCode": true
+    }
+  ]
+}
